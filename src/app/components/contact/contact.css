@@ -1,0 +1,88 @@
+/* 1. Fondo negro total para la página y centrado */
+.contact-section {
+  background-color: #000 !important;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente */
+  align-items: center;     /* Centra horizontalmente */
+  padding: 20px;
+}
+
+/* 2. Título Rojo Netflix */
+.form-title {
+  color: #e50914 !important;
+  font-family: 'Arial Black', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* 3. La caja del formulario */
+form {
+  background-color: #141414; /* Gris casi negro */
+  padding: 40px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px; /* Tamaño ideal para login/contacto */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* 4. Estilo de los campos (Inputs y Textarea) */
+input, textarea {
+  background-color: #333 !important; /* Fondo gris oscuro */
+  color: #fff !important;           /* Letras blancas al escribir */
+  border: none;
+  border-radius: 4px;
+  padding: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* 5. Etiquetas (Labels) */
+label {
+  color: #b3b3b3;
+  font-size: 14px;
+  text-align: left;
+  margin-top: 15px;
+}
+
+/* 6. Los avisos de error en ROJO */
+small {
+  color: #e50914 !important;
+  font-size: 11px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+  text-align: left;
+}
+
+/* 7. El botón Enviar */
+button {
+  background-color: #e50914 !important;
+  color: white !important;
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover:not(:disabled) {
+  background-color: #f40612 !important;
+}
+
+button:disabled {
+  background-color: #555 !important;
+  opacity: 0.6;
+}
+
+/* Limpieza de saltos de línea */
+br { display: none; }

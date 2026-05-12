@@ -1,0 +1,67 @@
+<section class="crud-container">
+
+  <h2 class="form-title">Gestión de Películas</h2>
+
+  <form #formPelicula="ngForm" (ngSubmit)="guardar(formPelicula)">
+
+    <div class="form-group">
+      <label>Nombre de la Película:</label>
+      <input type="text" name="nombre" [(ngModel)]="nueva.nombre" required minlength="3" #nombre="ngModel"
+        placeholder="Ej: Harry Potter">
+      <small class="error-msg" *ngIf="nombre.invalid && nombre.touched">
+        El nombre es obligatorio (mín. 3 caracteres)
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label>Descripción:</label>
+      <textarea name="descripcion" [(ngModel)]="nueva.descripcion" required #desc="ngModel"
+        placeholder="Sinopsis de la película..."></textarea>
+      <small class="error-msg" *ngIf="desc.invalid && desc.touched">La descripción es obligatoria</small>
+    </div>
+
+    <div class="form-group">
+      <label>URL de la Imagen (Poster):</label>
+      <input type="text" name="imagen" [(ngModel)]="nueva.imagen" required #img="ngModel"
+        placeholder="https://link-de-la-imagen.jpg">
+      <small class="error-msg" *ngIf="img.invalid && img.touched">La URL de la imagen es obligatoria</small>
+    </div>
+
+    <button type="submit" class="btn-submit" [disabled]="formPelicula.invalid">
+      {{ editando ? 'ACTUALIZAR PELÍCULA' : 'GUARDAR PELÍCULA' }}
+    </button>
+
+    <button type="button" class="btn-cancel" *ngIf="editando" (click)="cancelarEdicion(formPelicula)">
+      CANCELAR
+    </button>
+
+  </form>
+
+  <hr class="separator">
+
+  <div class="cards-grid">
+    <div class="movie-card" *ngFor="let p of peliculas">
+
+      <div class="poster-container">
+        <img [src]="p.imagen" alt="Poster de {{p.nombre}}">
+      </div>
+
+      <div class="movie-info">
+        <h3>{{p.nombre}}</h3>
+        <p>{{p.descripcion}}</p>
+
+        <div class="acciones">
+          <button class="btn-action edit" (click)="editar(p)">
+            ACTUALIZAR
+          </button>
+
+          <button class="btn-action delete" (click)="eliminar(p.id)">
+            ELIMINAR
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>

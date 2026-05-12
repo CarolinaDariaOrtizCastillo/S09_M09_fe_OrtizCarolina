@@ -1,0 +1,43 @@
+<section class="contact-section">
+
+  <h2 class="form-title">Contáctanos</h2>
+
+  <form #form="ngForm" (ngSubmit)="enviarFormulario()">
+
+    <label>Nombre:</label>
+    <input type="text" name="nombre" [(ngModel)]="user.nombre" required #nombre="ngModel">
+    <div *ngIf="nombre.invalid && nombre.touched">
+      <small>EL NOMBRE ES OBLIGATORIO</small>
+    </div>
+
+    <br><br>
+
+    <label>Correo electrónico:</label>
+    <input type="email" name="email" [(ngModel)]="user.email" required email #email="ngModel">
+    <div *ngIf="email.invalid && email.touched">
+      <small *ngIf="email.errors?.['required']">EL CORREO ES OBLIGATORIO</small>
+      <small *ngIf="email.errors?.['email']">EL CORREO NO ES VÁLIDO</small>
+    </div>
+
+    <br><br>
+
+    <label>Asunto:</label>
+    <input type="text" name="asunto" [(ngModel)]="user.asunto" required #asunto="ngModel">
+    <div *ngIf="asunto.invalid && asunto.touched">
+      <small>EL ASUNTO ES OBLIGATORIO</small>
+    </div>
+
+    <br><br>
+
+    <label>Mensaje:</label>
+    <textarea name="mensaje" [(ngModel)]="user.mensaje" required #mensaje="ngModel"></textarea>
+    <div *ngIf="mensaje.invalid && mensaje.touched">
+      <small>EL MENSAJE ES OBLIGATORIO</small>
+    </div>
+
+    <br><br>
+
+    <button type="submit" [disabled]="form.invalid">Enviar</button>
+
+  </form>
+</section>

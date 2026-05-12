@@ -1,0 +1,47 @@
+.hero {
+  height: 90vh;
+  background-image: url('https://images.unsplash.com/photo-1524985069026-dd778a71c7b4'); 
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.2));
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  color: white;
+  max-width: 600px;
+  margin-left: 60px;
+}
+
+.content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #ccc;
+}
+
+.content button {
+  background-color: #e50914;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.content button:hover {
+  background-color: #b00610;
+}

@@ -1,0 +1,63 @@
+.series {
+  padding: 50px;
+  background-color: #111;
+  color: white;
+}
+
+.series h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  text-align: center; /* 👉 centrado del título */
+}
+
+/* CONTENEDOR CENTRADO */
+.contenedor {
+  display: flex;
+  justify-content: center; /* 👉 centra las cards */
+  gap: 20px;
+  flex-wrap: wrap; /* 👉 bajan en filas */
+}
+
+/* CARD */
+.card {
+  width: 250px;
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* CONTENIDO */
+.info {
+  padding: 15px;
+}
+
+.info h3 {
+  margin-bottom: 10px;
+}
+
+.info p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* BOTÓN */
+button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: none;
+  background-color: #e50914;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}

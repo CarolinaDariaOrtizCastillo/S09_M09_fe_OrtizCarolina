@@ -1,0 +1,24 @@
+<section class="movies">
+  <h2>Películas populares</h2>
+
+  <div class="contenedor">
+    <div class="card" *ngFor="let m of movies" [class.expandida]="selectedMovieId === m.id">
+      
+      <img [src]="m.image" [alt]="m.name">
+
+      <div class="overlay">
+        <h3>{{ m.name }}</h3>
+
+        <!-- Descripción solo si se selecciona -->
+        <p *ngIf="selectedMovieId === m.id">
+          {{ m.description }}
+        </p>
+
+        <button (click)="toggleDescripcion(m)">
+          {{ selectedMovieId === m.id ? 'Ocultar' : 'Ver más' }}
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,16 @@
+<section class="series">
+  <h2>Series populares</h2>
+
+  <div class="contenedor">
+    <div class="card" *ngFor="let s of series">
+      <img [src]="s.image" [alt]="s.name">
+
+      <div class="info">
+        <h3>{{ s.name }}</h3>
+        <p>{{ s.description }}</p>
+
+        <button (click)="verSerie(s)">Ver más</button>
+      </div>
+    </div>
+  </div>
+</section>

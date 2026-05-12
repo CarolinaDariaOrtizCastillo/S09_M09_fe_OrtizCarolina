@@ -1,0 +1,38 @@
+.footer {
+  background-color: #000;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer h2 {
+  color: #e50914;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.links {
+  margin: 20px 0;
+}
+
+.links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #ccc;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.links a:hover {
+  color: white;
+}
+
+.copy {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #666;
+}
