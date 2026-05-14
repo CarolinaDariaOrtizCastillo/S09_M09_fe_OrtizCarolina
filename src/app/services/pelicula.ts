@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable({ providedIn: 'root' })
 export class PeliculaService {
-  private URL = 'http://localhost:8080/peliculas'; // La URL de tu Spring Boot
+  private URL = 'http://localhost:9090/peliculas'; // La URL de tu Spring Boot
 
   constructor(private http: HttpClient) {}
 
